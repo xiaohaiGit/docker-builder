@@ -16,6 +16,7 @@ RUN conda init bash \
        h5py==2.10.0 scikit-image==0.14.2 tqdm opencv-python ffmpeg-python numexpr colorama \
     && conda install pytorch==1.12.1 torchvision==0.13.1 torchaudio==0.12.1 cudatoolkit=10.2 -c pytorch
 
+
 # COPY root /
 
 # ENTRYPOINT [ "/usr/bin/make","-f","/Makefile" ]
