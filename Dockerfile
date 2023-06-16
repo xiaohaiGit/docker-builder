@@ -22,14 +22,11 @@ RUN conda init bash \
     && pip install -q youtube-dl \
     && pip install ffmpeg-python \
     && pip install librosa==0.9.1 \
-    && conda install -c conda-forge ffmpeg=5.1.2
-
-
-RUN mkdir /tools \
+    && conda install -c conda-forge ffmpeg=5.1.2 \
+    && mkdir /tools \
     && cd /tools \
     && git clone https://github.com/xiaohaiGit/CodeFormer.git \
     && cd CodeFormer \
-    && conda activate dig \
     && python basicsr/setup.py develop
 
 # COPY root /
