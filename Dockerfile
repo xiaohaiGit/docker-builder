@@ -1,12 +1,12 @@
 FROM nvidia/cuda:12.0.0-cudnn8-runtime-ubuntu22.04
 
 RUN rm -rf /etc/apt/sources.list.d/*.list \
-    && apt update  \
-    && apt install -y git \
-    && apt intall -y tzdata \
-    && apt install -y make \
-    && apt install -y wget \
-    && apt install -y vim \
+    && apt update \
+    && apt -y install git \
+    && apt -y install tzdata \
+    && apt -y install make \
+    && apt -y install wget \
+    && apt -y install  vim \
     && wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh \
     && mkdir /root/.conda \
     && bash Miniconda3-latest-Linux-x86_64.sh -b
