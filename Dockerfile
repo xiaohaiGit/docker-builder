@@ -2,8 +2,8 @@ FROM nvidia/cuda:12.0.0-cudnn8-runtime-ubuntu22.04
 
 RUN rm -rf /etc/apt/sources.list.d/*.list \
     && apt update \
-    && apt -y install git \
     && apt install -y tzdata \
+    && apt -y install git \
     && apt -y install make \
     && apt -y install wget \
     && apt -y install  vim \
