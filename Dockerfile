@@ -21,7 +21,7 @@ RUN conda init bash \
     && conda install -c conda-forge ffmpeg=5.1.2
 
 
-RUN mdir /tools \
+RUN mkdir /tools \
     && cd /tools \
     && git clone https://github.com/sczhou/CodeFormer.git \
     && cd CodeFormer \
