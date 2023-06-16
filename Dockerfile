@@ -27,7 +27,7 @@ RUN conda init bash \
 
 RUN mkdir /tools \
     && cd /tools \
-    && git clone https://github.com/sczhou/CodeFormer.git \
+    && git clone https://github.com/xiaohaiGit/CodeFormer.git \
     && cd CodeFormer \
     && conda activate dig \
     && python basicsr/setup.py develop
