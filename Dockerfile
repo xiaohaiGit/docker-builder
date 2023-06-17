@@ -26,6 +26,7 @@ RUN conda init bash \
     && pip install ffmpeg-python \
     && pip install librosa==0.9.1 \
     && conda install -c conda-forge ffmpeg=5.1.2 \
+    && pip install urllib3==1.26.15 \
     && mkdir /tools \
     && cd /tools \
     && wget https://github.com/sczhou/CodeFormer/archive/refs/heads/master.zip -O CodeFormer.zip \
