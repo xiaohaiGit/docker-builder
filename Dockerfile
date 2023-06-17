@@ -7,6 +7,7 @@ RUN rm -rf /etc/apt/sources.list.d/*.list \
     && apt -y install make \
     && apt -y install wget \
     && apt -y install  vim \
+    && apt -y install unzip \
     && wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh \
     && mkdir /root/.conda \
     && bash Miniconda3-latest-Linux-x86_64.sh -b
@@ -22,12 +23,13 @@ RUN conda init bash \
     && pip install -q youtube-dl \
     && pip install ffmpeg-python \
     && pip install librosa==0.9.1 \
-    && conda install -c conda-forge ffmpeg=5.1.2
-#    && mkdir /tools \
-#    && cd /tools \
-#    && git clone https://github.com/xiaohaiGit/CodeFormer.git \
-#    && cd CodeFormer \
-#    && python basicsr/setup.py develop
+    && conda install -c conda-forge ffmpeg=5.1.2 \
+    && mkdir /tools \
+    && cd /tools \
+    && wget https://github.com/sczhou/CodeFormer/archive/refs/heads/master.zip -O CodeFormer.zip \
+    && unzip CodeFormer.zip \
+    && cd CodeFormer \
+    && python basicsr/setup.py develop
 
 # COPY root /
 
