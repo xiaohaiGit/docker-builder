@@ -8,6 +8,8 @@ RUN rm -rf /etc/apt/sources.list.d/*.list \
     && apt -y install wget \
     && apt -y install  vim \
     && apt -y install unzip \
+    && apt-get -y install libgl1-mesa-glx \
+    && apt-get -y install libglib2.0-dev \
     && wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh \
     && mkdir /root/.conda \
     && bash Miniconda3-latest-Linux-x86_64.sh -b
