@@ -28,6 +28,7 @@ RUN conda init bash \
     && cd /tools \
     && wget https://github.com/sczhou/CodeFormer/archive/refs/heads/master.zip -O CodeFormer.zip \
     && unzip CodeFormer.zip \
+    && mv CodeFormer-master CodeFormer \
     && cd CodeFormer \
     && python basicsr/setup.py develop
 
