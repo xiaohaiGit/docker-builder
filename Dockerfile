@@ -19,6 +19,7 @@ RUN conda init bash \
 
 RUN conda create -n dig -c main python=3.7 cudnn=7.6.5 cudatoolkit=10.2
 RUN conda install mamba
+RUN conda activate dig
 
 # COPY root /
 
