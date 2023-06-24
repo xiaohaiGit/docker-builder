@@ -18,7 +18,6 @@ RUN conda init bash \
 #    && conda install pytorch==1.13.1 torchvision==0.14.1 torchaudio==0.13.1 pytorch-cuda=11.7 -c pytorch -c nvidia
 
 RUN conda create -n dig -c main python=3.7 cudnn=7.6.5 cudatoolkit=10.2
-RUN conda install mamba
 RUN conda activate dig
 
 # COPY root /
