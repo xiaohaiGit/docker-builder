@@ -20,7 +20,7 @@ RUN conda init bash \
 RUN conda create -n dig -c main python=3.7 cudnn=7.6.5 cudatoolkit=10.2
 RUN conda activate dig
 RUN pip install numba==0.48 librosa==0.7.0 numpy==1.19.3 scipy==1.4.1 resampy==0.3.1 tf2onnx==1.9.3 tensorflow-gpu==2.4.0 protobuf==3.20.3 h5py==2.10.0 scikit-image==0.14.2 tqdm opencv-python ffmpeg-python numexpr colorama chardet av pims
-
+RUN conda install ffmpeg=5.1.2
 # COPY root /
 
 # ENTRYPOINT [ "/usr/bin/make","-f","/Makefile" ]
